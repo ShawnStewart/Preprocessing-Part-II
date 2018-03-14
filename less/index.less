@@ -1,13 +1,105 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "general-styles";
+@import "header";
+@import "cta";
+@import "main-content";
+@import "contact";
+@import "footer";
 
+.container {
+    max-width: 95%;
+    
+//    @media @tablet {
+//        background-color: salmon;
+//    }
+//    
+//    @media @phone {
+//        background-color: cadetblue;
+//    }
+}
 
+header {
+    
+    nav {
+        .rotate(180deg);
+    }
+    
+    .logo {
+        .skew(15deg, 15deg);
+    }
+    
+    @media @tablet {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+        .logo {
+            align-self: center;
+        }
+    }
+}
 
+.cta {
+    max-width: 100%;
+    .opacity;
+    
+    @media @tablet {
+        .cta-text {
+            margin: 0 auto;
+        }
+        
+        img {
+            display: none;
+        }
+    }
+}
 
+.main-content {
+    .top-content {
+        .text-content {
+            width: 48%;
+        }
+        
+        .main-content-button1 {
+            .button-creator(50%, 25%, aqua);
+        }
+        
+        .main-content-button2 {
+            .button-creator(50%, 25%, salmon);
+        }
+    }
+    
+    img {
+        width: 100%;
+        .box-shadow(10px 10px cadetblue);
+    }
+    
+    .bottom-content {
+        .text-content {
+            width: 32%;
+        }
+        
+        .main-content-button3 {
+            .button-creator(70%, 25%, wheat);
+        }
+        
+        .main-content-button4 {
+            .button-creator(70%, 25%, lime);
+        }
+        
+        .main-content-button5 {
+            .button-creator(70%, 25%, gold);
+        }
+    }
+}
 
+.contact {
+    p {
+        border: 1px solid black;
+        padding: 5px;
+        .border-radius;
+    }
 
-
-
-
-
-
-
-
+}
